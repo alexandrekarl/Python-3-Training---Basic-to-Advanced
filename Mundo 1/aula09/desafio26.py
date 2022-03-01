@@ -1,0 +1,5 @@
+frase = str(input('Digite uma frase:'))
+frasemin = frase.lower().strip()
+print('A frase apresenta:', frasemin.count('a'), 'letras As')
+print('A letra a é escrita pela primeira vez na posição:', frasemin.find('a')+1)
+print('A letra a é escrita pela última vez na posição' , frasemin.rfind('a')+1)
