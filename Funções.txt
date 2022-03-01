@@ -1,0 +1,235 @@
+print = aparece na tela
+' ' = texto
++ - * / = operações
+() = separa operações, textos
+
+print(7+4)
+11
+print ('7'+'4')
+74
+print ('olá' , 5)
+olá 5
+Vírgula separa mensagens dentro dos parênteses
+
+nome='Alexandre'
+idade=25
+peso=70
+print(nome,idade,peso)
+Alexandre 25 70
+
+input = "leia", para o usuário digitar algo
+nome = input ('Qual é o seu nome?')
+Qual é o seu nome?Alexandre
+idade = input ('Qual a sua idade?')
+Qual a sua idade?28
+peso = input ('Qual é o seu peso?')
+Qual é o seu peso?70
+print (nome, idade, peso)
+Alexandre 28 70
+
+nome = input('Digite o seu nome:')
+print(f'É um prazer te conhecer, {nome}') ---- substitui print ('É uma prazer conhecer {}'.format (s))
+
+int (-2,-1,0,1,2), float (reais, 1/3, raiz2, pi), bool (boleanos, True/False), str (string, 'Olá')
+
+n1 = input ('Digite um valor:')
+print (type (n1)) ---- class str
+n1 = int(input ('Digite um valor:'))
+print (type (n1)) ------------ valor inteiro
+
+n = input('Digite algo:')
+print(n.isalnum())
+# pergunta se n é alfanumérico, números e letras; ------- há vários "is"
+
+** - potência (5**2==25)
+// - divisão inteira (5//2==2)
+% - resto da divisão (5%2==1)
+= - atribuição
+== - igual
+Ordem de precedência: (), **, */ // %, +-
+
+print('oi'*5)
+oioioioioi
+n1 = int(input('Digite um número:'))
+n2 = int(input('Digite um outro número:'))
+print(f'A soma é: {n1+n2}, o produto é: {n1*n2}, a divisão é: {n1/n2:.3f}, a divisão inteira é: {n1//n2} e a potência é {n1**n2}')
+
+print('blablabla' , end=' ' ---- end concatena o primeiro print com o segundo
+print('blabla \n blabla \n blabla') ----- contrabarra n pula a linha do print
+
+import math
+from math import sqrt, floor
+
+----módulo math----
+ceil-arredonda para cima
+floor-arredonda para baixo
+trunc-exclui depois da vírgula
+pow-potência
+sqrt-raiz quadrada
+factorial-fatorial
+
+import math
+num = int(input('Digite um número:'))
+raiz = math.sqrt(num)
+print(f'A raiz de {num} é igual a {raiz} ')
+
+import emoji
+print(emoji.emojize('Olá mundo :sunglasses:', use_aliases=True)) --- olhar no site do pythn, python package index, emoji cheat sheet
+Para acessar: menu python, settings, escolher o projeto na esquerda, project interpreter, mais (escolher os pacotes, ou deletar)
+
+import random
+print(random.random()) --- número randômico
+
+import random
+nomes = ['Maria', 'João', 'Pedro', 'Cláudia']
+print(random.choice(nomes))
+
+random.sample (lista_nomes, 4) --- escolhe e sorteia 4 nomes de uma lista
+
+random.randrange(1, 40) --- sorteia números de 1-40
+
+random.choice(nomes) ---- sorteia um nome da lista nomes criada
+
+Ou importa import math ou from math import "radians", por exemplo ---- from math import não precisa usar mais meth no algoritmo
+Do mesmo modo, from random import choice --- não precisa usar mais random
+
+import random
+print(random.sample(range(1, 30 + 1), 30)) ---- sorteia de uma amostra de 30, 30 pessoas
+
+frase[9] -- aparece o nono caractere de "frase" que eu atribuí; ATENÇÃO - Sempre começa no zero os caracteres
+frase[9:13] -- aparecem as letras de 9 até a 12
+frase[9:21:2] -- aparecem as letras de 9 até 20, mas aparece de dois em dois, ou seja, aparece um e não aparece o outro e repete
+frase[:5] -- começa do começo até o caractere 5
+frase[15:] -- indica o início (15) e vai até o final
+frase[9::3] -- começa no caractere 9 e escreve até o final, escrevendo sempre o terceiro caractere
+
+len(frase) -- saber o comprimento da frase, números de caracteres (começando do zero!!)
+frase.count('o') -- conta quantas vezea a letra o minúscula aparece na string
+frase.count('o', 0, 13) -- conta quantas letras o minúsculas aparecem do caractere 0 até o 12
+frase.find('deo') -- mostra a posição inicial que aparece 'deo', e.g. caractere 11 começa 'deo', aparece 11
+frase.find('android') -- se não há na string "android", o resultado é -1
+'curso' in frase -- true or false -- há curso na string frase
+frase.replace('Python', 'Android') -- procura python e substitui por android
+frase.upper() -- ficar frase em maiúscula
+frase.lower() -- ficar frase em minúscula
+frase.capitalize() -- torna apenas o primeiro caractere em maiúscula
+frase.title() -- analisa quantas palavras tem a string, pelas posições dos espaços e faz cada palavra começando com maiúscula
+frase.strip() -- remove todos os espaços inúteis no começo e final da string
+frase.rstrip() -- remove somente os espaços à direita (últimos espaços inúteis)
+frase.lstrip() -- remove somente os espaços à esquerda (primeiros espaços inúteis)
+frase.split() -- divisão da string em pedaços, cada palavra recebe uma string começando do zero. Divide uma string em uma lista
+frase.pop() -- seleciona o último elemento de uma lista criada
+'-'.join(frase) -- junta a frase dividindo cada palavra com um hífen '-'; pode ser trocado por qqr caractere, como um espaço
+
+print("""blablablabla""") --- escreve textos longos
+
+frase = 'Curso em Vídeo Python'
+print(frase.upper().count('O')) -- conta todos os caracteres 'O' com a frase toda maiúscula
+print(len(frase.strip())) -- conta os caracteres da string, excluindo os espaços inúteis do começo e fim
+
+frase = 'Curso em Vídeo Python'
+dividido = frase.split() -- divide a string em 4 strings, em listas
+print(dividido[0]) --- mostra a primeira string da lista criada, 'Curso' 
+
+frase - 'Curso em Vídeo Python'
+dividido = frase.split()
+print(dividido[2] [3]) -- mostra a quarta letra da terceira string da lista criada, 'e'
+
+tempo = int(input(('Digite quantos anos tem o seu carro:')))
+if tempo <=3:
+    print('carro novo')
+else:
+    print('Carro velho')
+print('--FIM--')                   OU:
+
+tempo = int(input(('Digite quantos anos tem o seu carro:')))
+print('carro novo' if tempo<=3 else 'carro velho')
+print('--FIM--')
+
+\033["style":"text":"back"m --- mudar as cores e aparência
+print('\033[1;31;43mOlá mundo\033[m')
+\033[m -- fecha e não aparece mais a cor
+
+style: 0(none), 1(bold), 4(underline), 7(negative)
+text: 30(black), 31(red), 32(green), 33(yellow), 34(blue), 35(magenta), 36(cyan), 37(grey), 97(white)
+back: 40(black), 41(red), 42(green), 43(yellow), 44(blue), 45(magenta), 46(cyan), 47(grey), 107(white)
+
+if carro.esquerda ():   
+elifs carro.direita (): -- pode add quantos elifs quiser
+else:
+
+nome = srt(input('Digite o seu nome:'))
+if nome == Alexandre
+print('Que nome bonito!)
+elif nome in 'Ana Cláudia Joana':
+print('Nome bem feminino')
+else:
+print(f'Nome comum', {})
+
+import datetime
+anonascimento = int(input('Digite o seu ano de nascimento:'))
+idade = datetime.date.today().year - anonascimento    ----- retorna o ano atual, pode ser alterado de year para month ou day
+print(f'{idade}')
+
+print(f"{'LOJAS ALEXANDRE':=^40}")  ----- ---- ^40 centraliza o texto, deve-se usar " e depois ' ============LOJAS ALEXANDRE=============
+valor = float(input('Digite o valor a ser pago:'))
+print('''FORMAS DE PAGAMENTO
+[1] à vista dinheiro/cheque
+[2] à vista cartão
+[3]2x cartão
+[4] 3x ou mais no cartão''')
+pagamento = int(input('Digite a condição de pagamento: ')) ---- colocar int pois o usuário irá digitar um inteiro!!
+if pagamento == 1:
+    print(f'O total será de {valor*0.9}')
+elif pagamento == 2:
+    print(f'O total será de {valor*0.95}')
+elif pagamento == 3:
+    print(f'O total será de {valor}')
+else:
+    print(f'O total será de {valor*1.2}')
+
+from time import sleep
+sleep(1) -- demora 1 segundo até aparecer o próximo comando
+
+print(f"{'LOJAS ALEXANDRE':=^40}") ---- ============LOJAS ALEXANDRE=============
+
+print('''FORMAS DE PAGAMENTO''') --- possibilita escrever pulando linhas
+
+if xxx (if, elif, elif, else) ---- pode adicionar ifs "maiores" e dentro deles if, elif, elif, elif, else
+
+for c in range(1,10): ---- usar c, mas pode ser qqr coisa
+   if moeda:
+      pega
+   passo
+   pula
+passo
+pega
+
+for c in range(0,6):
+    print(c)          ---- printa 0, 1, 2, 3, 4, 5
+
+for c in range(6, 0, -1):
+    print(c)                ------ printa 6, 5, 4, 3, 2, 1
+
+
+for c in range(0, 6, 2):
+    print(c)                 -------printa 0,2,4
+
+n = int(input('Digite um número:'))
+for c in range(0, n+1):
+    print(c)                ------- printa números de 0 até n
+
+i = int(input('Início:'))
+f = int(input('Fim:'))
+p = int(input('Passo'))
+for c in range(0, f+1, p):
+    print(c)                  ------ printa o número inicial, vai até o número final com um passo p escolhido
+
+s = 0
+for c in range(0,4):
+    n = int(input('Digite um valor:'))
+    s = s+n         ----- pode ser trocado por:   s += n
+print(f'Somatório: {s}') ---------  soma 4 valores  PERGUNTAR ALUIZIO
+
+
+
